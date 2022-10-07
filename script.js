@@ -1,10 +1,12 @@
+//displays curretn time at the top
 function displayTime() {
     var rightNow = moment().format('dddd MMM D, YYYY hh:mm:ss a');
     $('#currentTime').text(rightNow);
 }
-
+//refreshed every second
 setInterval(displayTime, 1000);
 
+//changes color of timeblock based on time of day
 if ((moment().hours() == 9))
     $('#9').attr('class', 'description col-10 present')
 if ((moment().hours() == 10))
@@ -44,6 +46,7 @@ if ((moment().hours() < 17))
     $('#17').attr('class', 'description col-10 future')
 
 
+//stores text to local storage
 var text;
 $('#save-button9').click(function () {
     text = $('#9').val();
@@ -82,6 +85,7 @@ $('#save-button17').click(function () {
     localStorage.setItem('17', text);
 });
 
+//dispalys text from local storage
 $('#9').val(localStorage.getItem('9'));
 $('#10').val(localStorage.getItem('10'));
 $('#11').val(localStorage.getItem('11'));
