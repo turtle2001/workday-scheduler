@@ -7,47 +7,18 @@ function displayTime() {
 setInterval(displayTime, 1000);
 
 //changes color of timeblock based on time of day
-if ((moment().hours() == 9))
-    $('#9').attr('class', 'description col-10 present')
-if ((moment().hours() == 10))
-    $('#10').attr('class', 'description col-10 present')
-if ((moment().hours() == 11))
-    $('#11').attr('class', 'description col-10 present')
-if ((moment().hours() == 12))
-    $('#12').attr('class', 'description col-10 present')
-if ((moment().hours() == 13))
-    $('#13').attr('class', 'description col-10 present')
-if ((moment().hours() == 14))
-    $('#14').attr('class', 'description col-10 present')
-if ((moment().hours() == 15))
-    $('#15').attr('class', 'description col-10 present')
-if ((moment().hours() == 16))
-    $('#16').attr('class', 'description col-10 present')
-if ((moment().hours() > 17))
-    $('#17').attr('class', 'description col-10 present')
-
-if ((moment().hours() < 9))
-    $('#9').attr('class', 'description col-10 future')
-if ((moment().hours() < 10))
-    $('#10').attr('class', 'description col-10 future')
-if ((moment().hours() < 11))
-    $('#11').attr('class', 'description col-10 future')
-if ((moment().hours() < 12))
-    $('#12').attr('class', 'description col-10 future')
-if ((moment().hours() < 13))
-    $('#13').attr('class', 'description col-10 future')
-if ((moment().hours() < 14))
-    $('#14').attr('class', 'description col-10 future')
-if ((moment().hours() < 15))
-    $('#15').attr('class', 'description col-10 future')
-if ((moment().hours() < 16))
-    $('#16').attr('class', 'description col-10 future')
-if ((moment().hours() < 17))
-    $('#17').attr('class', 'description col-10 future')
-
+for (i = 9; i < 18; i++) {
+    if ((moment().hours() == i))
+        $('#' + i).addClass('present');
+    else if ((moment().hours() < i))
+        $('#' + i).addClass('future');
+    else
+        $('#' + i).addClass('past');
+}
 
 //stores text to local storage
 var text;
+
 $('#save-button9').click(function () {
     text = $('#9').val();
     localStorage.setItem('9', text);
