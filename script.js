@@ -6,88 +6,88 @@ function displayTime() {
 setInterval(displayTime, 1000);
 
 if ((moment().hours() == 9))
-    $("#color9").attr("class", "col-md-10 present")
+    $('#9').attr('class', 'description col-10 present')
 if ((moment().hours() == 10))
-    $("#color10").attr("class", "col-md-10 present")
+    $('#10').attr('class', 'description col-10 present')
 if ((moment().hours() == 11))
-    $("#color11").attr("class", "col-md-10 present")
+    $('#11').attr('class', 'description col-10 present')
 if ((moment().hours() == 12))
-    $("#color12").attr("class", "col-md-10 present")
+    $('#12').attr('class', 'description col-10 present')
 if ((moment().hours() == 13))
-    $("#color13").attr("class", "col-md-10 present")
+    $('#13').attr('class', 'description col-10 present')
 if ((moment().hours() == 14))
-    $("#color14").attr("class", "col-md-10 present")
+    $('#14').attr('class', 'description col-10 present')
 if ((moment().hours() == 15))
-    $("#color15").attr("class", "col-md-10 present")
+    $('#15').attr('class', 'description col-10 present')
 if ((moment().hours() == 16))
-    $("#color16").attr("class", "col-md-10 present")
-if ((moment().hours() == 17))
-    $("#color17").attr("class", "col-md-10 present")
+    $('#16').attr('class', 'description col-10 present')
+if ((moment().hours() > 17))
+    $('#17').attr('class', 'description col-10 present')
 
 if ((moment().hours() < 9))
-    $("#color9").attr("class", "col-md-10 future")
+    $('#9').attr('class', 'description col-10 future')
 if ((moment().hours() < 10))
-    $("#color10").attr("class", "col-md-10 future")
+    $('#10').attr('class', 'description col-10 future')
 if ((moment().hours() < 11))
-    $("#color11").attr("class", "col-md-10 future")
+    $('#11').attr('class', 'description col-10 future')
 if ((moment().hours() < 12))
-    $("#color12").attr("class", "col-md-10 future")
+    $('#12').attr('class', 'description col-10 future')
 if ((moment().hours() < 13))
-    $("#color13").attr("class", "col-md-10 future")
+    $('#13').attr('class', 'description col-10 future')
 if ((moment().hours() < 14))
-    $("#color14").attr("class", "col-md-10 future")
+    $('#14').attr('class', 'description col-10 future')
 if ((moment().hours() < 15))
-    $("#color15").attr("class", "col-md-10 future")
+    $('#15').attr('class', 'description col-10 future')
 if ((moment().hours() < 16))
-    $("#color16").attr("class", "col-md-10 future")
+    $('#16').attr('class', 'description col-10 future')
 if ((moment().hours() < 17))
-    $("#color17").attr("class", "col-md-10 future")
+    $('#17').attr('class', 'description col-10 future')
 
 
 var text;
-$('#save-button1').click(function () {
-    text = $('#text1').val();
-    localStorage.setItem("text1", text);
-});
-$('#save-button2').click(function () {
-    text = $('#text2').val();
-    localStorage.setItem("text2", text);
-});
-$('#save-button3').click(function () {
-    text = $('#text3').val();
-    localStorage.setItem("text3", text);
-});
-$('#save-button4').click(function () {
-    text = $('#text4').val();
-    localStorage.setItem("text4", text);
-});
-$('#save-button5').click(function () {
-    text = $('#text5').val();
-    localStorage.setItem("text5", text);
-});
-$('#save-button6').click(function () {
-    text = $('#text6').val();
-    localStorage.setItem("text6", text);
-});
-$('#save-button7').click(function () {
-    text = $('#text7').val();
-    localStorage.setItem("text7", text);
-});
-$('#save-button8').click(function () {
-    text = $('#text8').val();
-    localStorage.setItem("text8", text);
-});
 $('#save-button9').click(function () {
-    text = $('#text9').val();
-    localStorage.setItem("text9", text);
+    text = $('#9').val();
+    localStorage.setItem('9', text);
+});
+$('#save-button10').click(function () {
+    text = $('#10').val();
+    localStorage.setItem('10', text);
+});
+$('#save-button11').click(function () {
+    text = $('#11').val();
+    localStorage.setItem('11', text);
+});
+$('#save-button12').click(function () {
+    text = $('#12').val();
+    localStorage.setItem('12', text);
+});
+$('#save-button13').click(function () {
+    text = $('#13').val();
+    localStorage.setItem('13', text);
+});
+$('#save-button14').click(function () {
+    text = $('#14').val();
+    localStorage.setItem('14', text);
+});
+$('#save-button15').click(function () {
+    text = $('#15').val();
+    localStorage.setItem('15', text);
+});
+$('#save-button16').click(function () {
+    text = $('#16').val();
+    localStorage.setItem('16', text);
+});
+$('#save-button17').click(function () {
+    text = $('#17').val();
+    localStorage.setItem('17', text);
 });
 
-$('#text1').val(localStorage.getItem("text1"));
-$('#text2').val(localStorage.getItem("text2"));
-$('#text3').val(localStorage.getItem("text3"));
-$('#text4').val(localStorage.getItem("text4"));
-$('#text5').val(localStorage.getItem("text5"));
-$('#text6').val(localStorage.getItem("text6"));
-$('#text7').val(localStorage.getItem("text7"));
-$('#text8').val(localStorage.getItem("text8"));
-$('#text9').val(localStorage.getItem("text9"));
+$('#9').val(localStorage.getItem('9'));
+$('#10').val(localStorage.getItem('10'));
+$('#11').val(localStorage.getItem('11'));
+$('#12').val(localStorage.getItem('12'));
+$('#13').val(localStorage.getItem('13'));
+$('#14').val(localStorage.getItem('14'));
+$('#15').val(localStorage.getItem('15'));
+$('#16').val(localStorage.getItem('16'));
+$('#17').val(localStorage.getItem('17'));
