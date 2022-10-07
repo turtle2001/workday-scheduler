@@ -3,7 +3,7 @@ function displayTime() {
     var rightNow = moment().format('dddd MMM D, YYYY hh:mm:ss a');
     $('#currentTime').text(rightNow);
 }
-//refreshed every second
+//refreshed time every second
 setInterval(displayTime, 1000);
 
 //changes color of timeblock based on time of day
@@ -57,12 +57,6 @@ $('#save-button17').click(function () {
 });
 
 //dispalys text from local storage
-$('#9').val(localStorage.getItem('9'));
-$('#10').val(localStorage.getItem('10'));
-$('#11').val(localStorage.getItem('11'));
-$('#12').val(localStorage.getItem('12'));
-$('#13').val(localStorage.getItem('13'));
-$('#14').val(localStorage.getItem('14'));
-$('#15').val(localStorage.getItem('15'));
-$('#16').val(localStorage.getItem('16'));
-$('#17').val(localStorage.getItem('17'));
+for (i = 9; i < 18; i++) {
+    $('#' + i).val(localStorage.getItem(i));
+}
